@@ -1,4 +1,4 @@
-# pulsar_search_generic_pipeline
+# pulsar_search_generic_pipelines
 Often one needs a quick method to process pulsar search data. Because pulsar search pipelines can be very complex - with many dependencies that are unavailable or require installation on new hardware - here I've tried to make a simple set of bash scripts that call the commonly used search software from a container (like this one: https://github.com/r-eatough/pulsar_docker) running on your system.
 
 I've provided two versions of the scripts; one stand-alone version to run from the command line, and another that can be submitted to a typical pbs job queue.  
