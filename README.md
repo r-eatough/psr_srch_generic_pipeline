@@ -15,7 +15,7 @@ When using PulsarX with presto, as in this pipeline, some other directories I'd 
     DD_plans=/path/to/directory/of/dedispersion/plans
     ACCEL_sifts=/path/to/directory/of/accel_sift/scripts
 
-Now here's a list of the worker scripts the pipeline calls ...
+Now here's a list of the worker scripts that the pipeline calls ...
 
     script1
     script2
