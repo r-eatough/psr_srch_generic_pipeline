@@ -17,9 +17,14 @@ When using PulsarX with presto, as in this pipeline, some other directories I'd 
 
 Now here's a list of the worker scripts that the pipeline calls ...
 
-    script1
-    script2
-    script3
+    symlink_cpy_psrfits.sh
+    dedisperse_all_psrfits.sh
+    dedisperse_all_psrfits_Prime.sh
+    dedisperse_all_psrfits_PrimePrime.sh
+    dedisperse_all_psrfits_PrimePrimePrime.sh
+    accelsearch_all_psrfits.sh
+    sift_all_psrfits.sh
+    fold_all_psrfits.sh
     
 
 
