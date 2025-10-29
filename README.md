@@ -5,13 +5,13 @@ I've provided two versions of the scripts; one stand-alone version to run from t
 
 After creating a simple directory structure this should just work; likely after some minor tweaking ;). The directory structure I recommend is the following:
 
-DATA<br>
-SCRIPTS<br>
-PROCESSING<br>
-RESULTS<br>
+    DATA_DIR=/path/to/your/data
+    SCRIPT_DIR=/path/to/your/scripts
+    PROCESSING_DIR=/path/to/your/working/directory
+    RESULTS_DIR=/path/to/processing/results
 
-## standalone bash script
+## standalone bash scripts
 TBD
 
-## pbs bash script (to submit to a pbs job queue)
+## pbs bash scripts (to submit to a pbs job queue)
 TBD
