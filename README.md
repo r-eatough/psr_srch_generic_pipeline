@@ -1,12 +1,14 @@
 # pulsar_search_generic_pipeline
-Often one needs a quick method to process pulsar search data. Because pulsar search pipelines can be very complex - with many dependencies that are unavailable or require installation on new hardware - here is a simple set of bash scripts that call the commonly used search software from a container (like this one: https://github.com/r-eatough/pulsar_docker) running on your system.
+Often one needs a quick method to process pulsar search data. While the search software used is complex, the data processing pipeline can be as simple as a c-shell, bash or python script. Here are a simple set of bash scripts that call the commonly used search software on pulsar .fits files. 
 
-Two versions of the scripts are proovided: one stand-alone version to run from the command line; and another that can be submitted to a typical _pbs_ job queue.  
+Two versions of the scripts are provided: 1.) a stand-alone version to run from the command line (dependencies _presto_ & _PulsarX_), 2.) a version that can be submitted to a typical _pbs_ job queue which runs the software from a container (like this one: https://github.com/r-eatough/pulsar_docker) using _apptainer_. 
 
-After creating a simple directory structure the scripts should just work; of course probably after some minor tweaking ;) The recommended directory structure is the following:
+The latter is very useful for HPC applications because pulsar search software may have many dependencies that are unavailable or require installation by the administrator on new hardware.  
+
+After creating a simple directory structure the scripts should just work; of course probably after some minor tweaking ;) Also, the type and scope of processing can all be adjusted by modifying the worker scripts. The recommended directory structure is the following:
 
     DATA_DIR=/path/to/your/data
-    SCRIPT_DIR=/path/to/your/scripts
+    SCRIPT_DIR=/path/to/your/worker/scripts
     PROCESSING_DIR=/path/to/your/working/directory
     RESULTS_DIR=/path/to/processing/results
 
