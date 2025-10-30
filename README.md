@@ -34,4 +34,4 @@ The reason that the dedispersion stages are repeated is purely due to hardware l
     pulsar_search_generic_standalone.sh
 
 ## 2.) pbs bash script (to submit to a pbs job queue) running a software container
-TBD
+    pulsar_search_generic_apptainer.sh
