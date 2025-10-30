@@ -28,7 +28,7 @@ Now here's a list of the worker scripts that the pipeline calls ...
     sift_all_psrfits.sh
     fold_all_psrfits.sh
     
-
+The reason that some scripts the dedispersion stages are repeated is purely due to hardware limitations. For example, I found that dedispersion of 2048 timeseries simultaneously was comfotable for the hardware I use. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
 
 ## standalone bash scripts
 TBD
