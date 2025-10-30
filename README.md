@@ -31,7 +31,7 @@ Now here's a list of the worker scripts that the pipeline calls ...
 The reason that the dedispersion stages are repeated is purely due to hardware limitations. For example, in this example dedispersion of 2048 timeseries simultaneously was comfortable for the hardware used. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
 
 ## 1.) standalone bash script using installed software
-TBD
+    pulsar_search_generic_apptainer_standalone.sh
 
 ## 2.) pbs bash script (to submit to a pbs job queue) running a software container
 TBD
