@@ -5,7 +5,7 @@ Two versions of the scripts are provided: 1.) a stand-alone version to run from 
 
 The latter is very useful for HPC applications because pulsar search software may have many dependencies that are unavailable or require installation by the administrator on new hardware.  
 
-After creating a simple directory structure the scripts should just work; of course probably after some minor tweaking ;) Also, the type and scope of processing can all be adjusted by modifying the worker scripts. The recommended directory structure is the following:
+After creating a simple directory structure the scripts should just work; of course probably after some minor tweaking ;) Also, the type and scope of processing can be adjusted by modifying the worker scripts. The recommended directory structure is the following:
 
     DATA_DIR=/path/to/your/data
     SCRIPT_DIR=/path/to/your/worker/scripts
@@ -19,16 +19,16 @@ When using PulsarX with presto, as in this pipeline, some other directories I'd 
 
 Now here's a list of the worker scripts that the pipeline calls ...
 
-    symlink_cpy_psrfits.sh
-    dedisperse_all_psrfits.sh
-    dedisperse_all_psrfits_Prime.sh
-    dedisperse_all_psrfits_PrimePrime.sh
-    dedisperse_all_psrfits_PrimePrimePrime.sh
-    accelsearch_all_psrfits.sh
-    sift_all_psrfits.sh
-    fold_all_psrfits.sh
+    symlink_cpy_psrfits.sh  -- copies or sym links data to working directory.
+    dedisperse_all_psrfits.sh  -- first dedispersion block.
+    dedisperse_all_psrfits_Prime.sh  -- ... more dedispersion.
+    dedisperse_all_psrfits_PrimePrime.sh  -- ... more dedispersion.
+    dedisperse_all_psrfits_PrimePrimePrime.sh  -- ... more dedispersion.
+    accelsearch_all_psrfits.sh  -- find pulsar signals. 
+    sift_all_psrfits.sh  -- sift and combine repeated detections. 
+    fold_all_psrfits.sh  -- fold sifted detections to make pulsar canidates. 
     
-The reason that some scripts the dedispersion stages are repeated is purely due to hardware limitations. For example, I found that dedispersion of 2048 timeseries simultaneously was comfotable for the hardware I use. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
+The reason that the dedispersion stages are repeated is purely due to hardware limitations. For example, I found that dedispersion of 2048 timeseries simultaneously was comfortable for the hardware I use. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
 
 ## 1.) standalone bash script using installed software
 TBD
