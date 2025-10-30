@@ -19,16 +19,16 @@ When using PulsarX with presto, as in this pipeline, some other directories I'd 
 
 Now here's a list of the worker scripts that the pipeline calls ...
 
-    symlink_cpy_psrfits.sh  -- copies or sym links data to working directory.
-    dedisperse_all_psrfits.sh  -- first dedispersion block.
-    dedisperse_all_psrfits_Prime.sh  -- ... more dedispersion.
-    dedisperse_all_psrfits_PrimePrime.sh  -- ... more dedispersion.
-    dedisperse_all_psrfits_PrimePrimePrime.sh  -- ... more dedispersion.
-    accelsearch_all_psrfits.sh  -- find pulsar signals. 
-    sift_all_psrfits.sh  -- sift and combine repeated detections. 
-    fold_all_psrfits.sh  -- fold sifted detections to make pulsar canidates. 
+    symlink_cpy_psrfits.sh  -- copies or sym links data to working directory
+    dedisperse_all_psrfits.sh  -- first block of dedispersion
+    dedisperse_all_psrfits_Prime.sh  -- more dedispersion
+    dedisperse_all_psrfits_PrimePrime.sh  -- more dedispersion
+    dedisperse_all_psrfits_PrimePrimePrime.sh  -- more dedispersion
+    accelsearch_all_psrfits.sh  -- find pulsar signals 
+    sift_all_psrfits.sh  -- sift and combine repeated detections 
+    fold_all_psrfits.sh  -- fold sifted detections to make pulsar candidates to be viewed 
     
-The reason that the dedispersion stages are repeated is purely due to hardware limitations. For example, I found that dedispersion of 2048 timeseries simultaneously was comfortable for the hardware I use. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
+The reason that the dedispersion stages are repeated is purely due to hardware limitations. For example, in this example dedispersion of 2048 timeseries simultaneously was comfortable for the hardware used. This can be increased or decreased accordingly. Most of the time is spent in the acceleration search, so once again, this can be tweaked to optimize the running time.   
 
 ## 1.) standalone bash script using installed software
 TBD
