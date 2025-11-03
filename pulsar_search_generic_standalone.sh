@@ -1,4 +1,4 @@
-#!/bin/shy
+#!/bin/sh
 #
 #     BASIC PSR SEARCH SCRIPT 
 #        
